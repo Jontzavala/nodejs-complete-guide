@@ -12,14 +12,14 @@ const app = express();
 //   res.send('<p>Assignment solved (almost!)</p>');
 // });
 
-app.use("/users", (req, res, next) => {
-  console.log("/users middleware");
-  res.send("<p>The Middleware that handles just /users</p>");
-});
+// app.use("/users", (req, res, next) => {
+//   console.log("/users middleware");
+//   res.send("<p>The Middleware that handles just /users</p>");
+// });
 
-app.use("/", (req, res, next) => {
-  console.log("/ middleware");
-  res.send("<p>The Middleware that handles just /</p>");
-});
+// app.use("/", (req, res, next) => {
+//   console.log("/ middleware");
+//   res.send("<p>The Middleware that handles just /</p>");
+// });
 
-app.listen(3000);
+// app.listen(3000);
