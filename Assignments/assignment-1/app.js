@@ -1,3 +1,20 @@
+const express = require("express");
+
+const app = express();
+
+app.use("/users", (req, res, next) => {
+  console.log("in the another middleware");
+  res.send("<h1>Users</h1>");
+});
+
+app.use("/", (req, res, next) => {
+  console.log("in the another middleware");
+  res.send('<html><head><title>Assignment 1</title></head><body><form action="/create-user" method="POST"><input type="text" name="username"><button type="submit">Send</button></form></body></html>');
+});
+
+app.listen(3000);
+
+/*
 const http = require("http");
 
 const server = http.createServer((req, res) => {
@@ -35,3 +52,4 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3000);
+*/
